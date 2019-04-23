@@ -1,0 +1,66 @@
+header{
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    /* it makes it comes down in 1s */
+    animation: headerAni 1s;
+
+}
+
+header div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.brandName{
+    margin: 0 30px;
+    font-size: 1.6rem;
+}
+.brandName span{
+    color: var(--primary-green);
+}
+
+header a{
+    text-decoration: none;
+    margin: 0 4px;
+    color: var(--secondary-grey);
+}
+
+header a:hover{
+    color: var(--default-blue);
+}
+
+.activeMenu{
+    color: var(--default-blue) !important;
+    cursor: default !important;
+}
+header nav a{
+    margin: 0 15px;
+}
+
+/* in order to create animation */
+@keyframes headerAni{
+    from{top: -100px} 
+    to{top: 0}
+}
+
+@media (max-width: 540px){
+    header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header div{
+    justify-content: right;
+    }
+}
